@@ -1,0 +1,56 @@
+{
+    "_default": {
+      "1": {
+        "name": "MyForm",
+        "user_name": "text",
+        "order_date": "date"
+      },
+      "2": {
+        "name": "OrderForm",
+        "lead_email": "email",
+        "phone": "phone"
+      },
+      "3": {
+        "name": "CustomForm",
+        "custom_call": "phone"
+      },
+      "4": {
+        "name": "Form"
+      },
+      "5": {
+        "name": "Houses",
+        "houses": "text",
+        "neighbor number": "phone"
+      },
+      "6": {
+        "name": "AnotherForm",
+        "first_field": "text",
+        "second_field": "phone",
+        "third_field": "email",
+        "fourth_field": "date"
+      },
+      "7": {
+        "name": "user_input",
+        "user_input": "text",
+        "email_address": "email"
+      },
+      "8": {
+        "name": "Form",
+        "input_name": "text",
+        "contact_email": "email"
+      },
+      "9": {
+        "name": "AdditionalForm",
+        "field_a": "text",
+        "field_b": "phone",
+        "field_c": "email",
+        "field_d": "date"
+      },
+      "10": {
+        "name": "HistoryPeople",
+        "name_people": "text",
+        "date_born": "date",
+        "date_death": "date"
+      }
+    }
+  }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <form method="POST">
+        <div id="fields-container">
+            {% for i in range (1,amount+1) %}
+                <div class="field">
+                    <h3>Поле {{ i }}</h3>
+                    <label for="f_name{{ i }}">Имя поля:</label>
+                    <input type="text" name="f_name{{ i }}" value="{{ request.form.get('f_name' + loop.index|string, '') }}" required>
+                    <label for="value{{ i }}">Значение:</label>
+                    <input type="text" name="value{{ i }}" value="{{ request.form.get('value' + loop.index|string, '') }}" required>
+                    <br>
+                </div>
+            {% endfor %}
+        </div>
+        {% if content %}
+        {% if bool %}
+            <p>Имена шаблонов:</p>
+            {% for item in content %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        {% else %}
+            <p>Имена шаблонов не найдены:</p>
+            <p>{{ content }}</p>
+        {% endif %}
+        {% endif %}
+    <div>
+        <br>
+        <button type="button" onclick="addNewField()">Добавить поле</button>
+        <button type="button" onclick="removeLastField()">Удалить поле</button>
+        <button type="submit">Проверка</button>
+    </div>
+    </form>
+    <script>
+        function addNewField() {
+            var container = $('#fields-container');
+            var newIndex = container.children('.field').length + 1;
+
+            var newField = $('<div class="field">' +
+                                '<h3>Поле ' + newIndex + '</h3>' +
+                                '<label for="f_name' + newIndex + '">Имя поля:</label>' +
+                                '<input type="text" name="f_name' + newIndex + '" required>' +
+                                '<label for="value' + newIndex + '">Значение:</label>' +
+                                '<input type="text" name="value' + newIndex + '" required>' +
+                                '<br>' +
+                            '</div>');
+
+            container.append(newField);
+        }
+        function removeLastField() {
+            var container = $('#fields-container');
+            container.children('.field').last().remove();
+        }
+    </script>
+</body>
+</html>
