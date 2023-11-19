@@ -14,7 +14,7 @@ venv\Scripts\activate
 pip3 install -r requirements.txt
 python app.py
 python testscript.py # для запуска тестового скрипта в другом терминале
-venv\Scripts\deactivate
+deactivate
 ```
 -Linux commands:
 ```sh
