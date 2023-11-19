@@ -5,6 +5,7 @@
 git clone https://github.com/HveshO/testjob1.git
 ```
 Далее по выбору:
+
 -powershell commands:
 ```sh
 venv\Scripts\activate
