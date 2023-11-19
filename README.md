@@ -9,14 +9,14 @@ git clone https://github.com/HveshO/testjob1.git
 -powershell commands:
 ```sh
 venv\Scripts\activate
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt # при необходимости
 python app.py
 venv\Scripts\deactivate
 ```
 -Linux commands:
 ```sh
 source activate venv
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt # при необходимости
 python3 app.py
 deactivate
 ```
